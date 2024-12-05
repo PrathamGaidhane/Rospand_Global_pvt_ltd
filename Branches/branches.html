@@ -93,9 +93,20 @@
     </main>
 
 
-    <footer>
-        <p>© 2024 Rospand. All rights reserved.</p>
-    </footer>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+    </script>
 
 </body>
 
