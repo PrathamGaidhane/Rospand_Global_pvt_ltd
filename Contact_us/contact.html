@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+
+    <main>
+        <!-- Intro Section -->
+        <div class="contact-intro">
+            <h1>Contact Us</h1>
+            <p>We value your feedback and inquiries. Please reach out using the details below or fill out the form.
+            </p>
+        </div>
+
+        <!-- Contact Bars -->
+        <div class="contact-bars">
+            <!-- Left Bar -->
+            <div class="left-bar">
+                <h2>Contact Information</h2>
+                <p><i class="fa-regular fa-envelope"></i> Email: rospandglobal27@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Phone: +91 8421148095</p>
+                <p>Follow us:</p>
+                <a href="https://www.facebook.com/share/1BfaXiMNKh/?mibextid=LQQJ4d" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_rospand?igsh=MWU4Z3RiYXR6bGk0MA%3D%3D&utm_source=qr" class="social-icon"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/amit-dhargawe-52726333a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <div class="download">
+                    <button>Download PPT</button>
+                </div>
+            </div>
+
+            <!-- Right Bar -->
+            <div class="right-bar">
+                <h2>Get in Touch</h2>
+                <form id="contact-form" action="save-to-excel.php" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>© 2024 Rospand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function downloadPPT() {
+            alert('Downloading PPTs...');
+        }
+    </script>
+</body>
+
+</html>

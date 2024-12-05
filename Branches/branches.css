@@ -1,0 +1,167 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+    height: 100%; /* Ensure full height of the viewport */
+}
+
+/* Body Layout: Flexbox to keep footer at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+    background-color: #244455;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    background-color: #874f41;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main p {
+    color: #333;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Branches Section */
+.branch-with-map, .branch {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.branch-with-map h2, .branch h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #244455;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.branch {
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.branch:hover {
+    transform: translateY(-10px); /* Moves the branch slightly upward */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhances the shadow effect for hover */
+}
+
+
+/* Uniform Image Styles */
+.flag-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images maintain aspect ratio while fitting into the defined size */
+    flex-shrink: 0; /* Prevents shrinking of the image */
+}
+.branch{
+    width: 400px;
+}
+.branch-details {
+    width: 500px;
+    flex-grow: 1; /* Ensures the details take up the remaining space */
+}
+
+.branch-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.branch-details i {
+    margin-right: 10px;
+    color: #244455;
+}
+.branch img{
+    width: 100px;
+}
+/* Map Styles */
+.map {
+    width: 100%;
+    overflow: hidden;
+}
+
+.line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.first{
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* This ensures footer sticks at the bottom of the page */
+}
+
+footer p {
+    margin: 0;
+}

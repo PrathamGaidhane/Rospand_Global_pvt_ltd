@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+}
+
+/* Agro Products Section */
+main {
+    padding: 20px;
+    background-color: #fbe9d0;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main .intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Product Grid */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Cards */
+.product {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Images */
+.product img {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image fills the container without distortion */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Product Titles */
+.product h3 {
+    background-color: #874f41;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.product p {
+    padding: 10px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

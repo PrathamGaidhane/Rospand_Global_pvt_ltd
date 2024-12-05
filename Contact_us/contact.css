@@ -1,0 +1,143 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+}
+
+/* Single Section: Contact Section */
+
+
+/* Contact Intro: Heading and Paragraph */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-intro h1 {
+    font-size: 2.5rem;
+    color: #874f41;
+}
+
+.contact-intro p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Contact Bars: Left and Right Layout */
+.contact-bars {
+    padding: 0 50px 50px 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Left Bar: Simple Styling with Left Padding */
+.left-bar {
+    flex: 1;
+   padding-left: 120px;
+    color: #244855;
+}
+
+.left-bar h2 {
+    color: #874f41;
+    margin-bottom: 10px;
+}
+
+.left-bar p {
+    margin: 5px 0;
+}
+
+.left-bar a {
+    color: #874f41;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.left-bar a:hover {
+    text-decoration: underline;
+}
+
+.left-bar .download button {
+    background-color: #874f41;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.left-bar .download button:hover {
+    background-color: #244855;
+}
+
+/* Right Bar: Boxed Contact Form with Right Padding */
+.right-bar {
+    flex: 1;
+    padding: 20px;
+    padding-right: 120px; /* Adds padding on the right */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #874f41;
+}
+
+
+
+.right-bar h2 {
+    color: #874f41;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #244855;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: #874f41;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #244855;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

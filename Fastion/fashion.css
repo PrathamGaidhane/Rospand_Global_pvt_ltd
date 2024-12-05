@@ -1,0 +1,136 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+}
+
+/* Fashion Background Section */
+.fashionbg {
+    position: relative; /* To position text over the background image */
+    background-image: url('/images/4e3e6e28-670e-4813-b51a-0da5f077f2cb.jpg'); /* Replace with your image path */
+    background-size:cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes it fill the viewport height */
+    margin-top: 60px; /* Ensures no space around the section */
+    padding: 0; /* Ensures no padding inside the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255); /* Ensures text is visible over the image */
+    text-align: center;
+    font-size: 2rem; /* Adjust text size as needed */
+    font-weight: bold;
+}
+
+.fashionbg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(49, 12, 3, 0.6); /* Adjust opacity as needed */
+    z-index: 1; /* Place the overlay below the text */
+}
+
+.fashionbg .intro {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 10px 0 0 0;
+    color: white;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #fbe9d0;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main .intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Fashion Sections */
+.fashion-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Update the row to display items in a single row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Ensure each section shrinks if needed */
+.section {
+    text-align: left;
+    flex: 1;
+    max-width: 30%; /* Adjust width for three items in a row */
+}
+
+/* Adjust image responsiveness */
+.section .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.3s ease;
+}
+
+.section .image img:hover {
+    transform: rotate(5deg) scale(1.05);
+    filter: brightness(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section .description {
+    text-align: left;
+}
+
+.section .description p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.section .description .quote {
+    font-style: italic;
+    color: #874f41;
+}
+
+/* Footer */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+    </header>
+
+    <main>
+        <div class="about-content">
+            <!-- Left Section: About Text -->
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>At Rospand Global Techno Services Pvt. Ltd., we take pride in being a multifaceted organization with
+                    over 20 years of excellence and expertise across diverse industries. Our commitment to quality and
+                    innovation drives our success in three dynamic sectors: <br><br>
+                    <strong>Agro Products:</strong>Delivering high-quality, sustainable agricultural solutions to meet
+                    the global demand for safe and nutritious food.<br><br>
+                    <strong> Clothing Sector : </strong>Creating versatile and stylish apparel that blends quality
+                    craftsmanship with contemporary trends.<br><br>
+                    <strong> IT Services: </strong>Offering cutting-edge technology solutions, from software development
+                    to IT consulting, to empower businesses worldwide.<br><br>
+                    At Rospand Global Techno Services Pvt. Ltd., we don't just provide services – we deliver value,
+                    drive progress, and inspire trust across industries. Together, we shape a better future for
+                    businesses and communities around the world.
+                </p>
+            </div>
+
+            <div class="right">
+                <img src="/images/about.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <!-- Right Section: Image Cards -->
+        <div class="about-sections">
+            <div>
+                <h2>Our Bussinesses</h2>
+            </div>
+            <!-- First Row -->
+            <div class="row">
+                <div class="card">
+                    <a href="fashion.html">
+                        <img src="/images/clothes.jpg" alt="Fashion">
+                        <h3>Fashion</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="agro.html">
+                        <img src="/images/agro.jpg" alt="Agro">
+                        <h3>Agro</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="it-services.html">
+                        <img src="/images/it back (1).jpg" alt="Agro">
+                        <h3>IT Services and BPO</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="ourteam">
+                <div class="description">
+                    <h2>OUR TEAM</h2>
+                    <p>Meet the experts behind Rospand Global Techno Services Pvt. Ltd. Together, we drive our success and innovation across multiple industries.</p>
+                </div>
+                
+                <!-- First Row -->
+                <div class="post1">
+                    <div class="team-hover">
+                        <img src="/images/amit sir.jpg" alt="Mr. Amit Dhargawe">
+                        <div class="hover-text">
+                            <h3>Mr. Amit Dhargawe</h3>
+                            <p>Director</p>
+                            <p>Contact: +91 7218148095, +971 527542126</p>
+                        </div>
+                    </div>
+                    <div class="team-hover">
+                        <img src="/images/sandeep sir.jpg" alt="Mr. Sandeep Katre">
+                        <div class="hover-text">
+                            <h3>Mr. Sandeep Katre</h3>
+                            <p>Sr. Manager</p>
+                            <p>Contact: +91 8668622470</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Second Row -->
+                <div class="post2">
+                    <div class="team-hover">
+                        <img src="/images/justin sir.jpg" alt="Mr. Justin Anthony">
+                        <div class="hover-text">
+                            <h3>Mr. Justin Anthony</h3>
+                            <p>BPO Manager</p>
+                            <p>Contact: +91 8329196598</p>
+                        </div>
+                    </div>
+                    <div class="team-hover">
+                        <img src="/images/sanskruti.jpg" alt="Ms. Sanskruti Shambharkar">
+                        <div class="hover-text">
+                            <h3>Ms. Sanskruti Shambharkar</h3>
+                            <p>Assistant Manager (Projects)</p>
+                            <p>Contact: +91 9356544964</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+          
+    </main>
+    <footer>
+        <p>© 2024 Rospand. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

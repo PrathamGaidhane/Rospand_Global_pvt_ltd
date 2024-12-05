@@ -1,0 +1,349 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+}
+
+/* Sticky Top Bar */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 14px;
+}
+
+/* Sticky Navigation Bar */
+header {
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+    background-color: #244455;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Links */
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    background-color: #874f41;
+    border-radius: 5px;
+}
+
+/* Top Bar Styles */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #244455;
+    font-size: 18px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-row i {
+    color: #244455;
+    font-size: 16px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.divider {
+    width: 2px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 10px;
+    align-self: center;
+}
+
+.social-icon {
+    color: #244455;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color: #874f41;
+}
+
+
+
+/* Grid Styling */
+.services-section {
+    padding: 50px;
+    padding-top: 10px;
+}
+.services-section h1{
+    text-align: center;
+    color: #244455;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #874f41;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: white;
+}
+
+.service-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+/* Technologies Section */
+.technologies-section {
+    padding: 50px;
+    background-color: #fbe9d0;
+}
+
+.technologies-section h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #244455;
+}
+
+/* Grid Layout */
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px; /* Space between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Individual Technology Card */
+.technology-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Circular Image Styling */
+.tech-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures content stays inside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #244455; /* Optional: Add a background color for better visuals */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+/* Hover Effect for Circular Image */
+.tech-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image inside Circular Div */
+.tech-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures image scales without distortion */
+}
+
+/* Technology Name Styling */
+.technology-card h3 {
+    font-size: 1em;
+    color: #244455;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* About IT Services Section */
+.about-it-services {
+    padding: 50px 20px;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-it-services .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-it-services .text {
+    color: #244455;
+    text-align:justify;
+}
+
+.about-it-services .text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #874f41;
+}
+
+.about-it-services .text p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #555;
+}
+
+.about-it-services .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-it-services .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Reverse Layout for About IT Services */
+.about-it-services-reverse {
+    padding: 50px 20px;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Structure for Reverse Layout */
+.about-it-services-reverse .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Image Section */
+.about-it-services-reverse .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.about-it-services-reverse .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.about-it-services-reverse .text {
+    color: #244455;
+    text-align: justify;
+}
+
+/* Heading Styling */
+.about-it-services-reverse .text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #874f41;
+}
+.image img{
+    border: 6px solid #874f41;
+}
+/* Paragraph Styling */
+.about-it-services-reverse .text p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #555;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

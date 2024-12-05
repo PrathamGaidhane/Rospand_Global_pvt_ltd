@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            font-size: 14px;
+            background-color: #fbe9d0;
+            align-items: start;
+            min-height: 100vh;
+        }
+
+        .footer {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 30px 30px 20px 30px;
+            color: #dbd8d8;
+            background-color: #101e25;
+            border-top: 1px solid #141313;
+        }
+
+        .footer>* {
+            flex: 1 100%;
+        }
+
+        .footer__addr {
+            margin-right: 1.25em;
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            /* Added to align items vertically */
+            align-items: flex-start;
+            /* Ensures alignment from the left */
+        }
+
+        .footer__logo {
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .footer__addr h2 {
+            margin-top:5px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .nav__title {
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .footer address {
+            font-style: normal;
+            color: #999;
+        }
+
+        .footer__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            max-width: max-content;
+            background-color: rgb(33, 33, 33, 0.07);
+            border-radius: 100px;
+            color: #cfc7c7;
+            line-height: 0;
+            margin: 0.6em 0;
+            font-size: 1rem;
+            padding: 0 1.3em;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer li {
+            line-height: 2em;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .footer__nav {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .footer__nav>* {
+            flex: 1 50%;
+            margin-right: 1.25em;
+        }
+
+        .nav__ul a {
+            color: #999;
+        }
+
+        .nav__ul--extra {
+            column-count: 2;
+            column-gap: 1.25em;
+        }
+
+        .legal {
+            display: flex;
+            flex-wrap: wrap;
+            color: #999;
+            margin: 20px 0px;
+        }
+
+        .legal p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .legal__links {
+            display: flex;
+            align-items: center;
+        }
+
+        .heart {
+            color: #2f2f2f;
+        }
+
+        @media screen and (min-width: 24.375em) {
+            .legal .legal__links {
+                margin-left: auto;
+            }
+        }
+
+        @media screen and (min-width: 40.375em) {
+            .footer__nav>* {
+                flex: 1;
+            }
+
+            .nav__item--extra {
+                flex-grow: 2;
+            }
+
+            .footer__addr {
+                flex: 1 0px;
+            }
+
+            .footer__nav {
+                flex: 2 0px;
+            }
+        }
+
+        /* For better alignment on small screens */
+        @media screen and (max-width: 600px) {
+            .footer__addr {
+                align-items: center;
+                /* Center the contact section content on small screens */
+                text-align: center;
+                /* Ensure text is centered */
+            }
+
+            .footer__logo {
+                font-size: 1.2rem;
+                /* Adjust font size on small screens */
+            }
+
+            .footer__btn {
+                padding: 0.5em 1.2em;
+                font-size: 0.9rem;
+                /* Adjust button font size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Rospand Global Techno Services Pvt Ltd</h1>
+
+            <h2>Offices</h2>
+
+            <address>
+                <p><img src="/images/india.jpg" height="20px" alt="">
+                    Rospand Globl Techno Services Pvt Ltd
+                    106 Suphalam Building Opposite ICAD Institute, Byramji Town, Nagpur.440013
+                </p>
+                <p><img src="/images/dubai.jpg" height="20px" alt="">
+                    Rospand Globl Techno Services FZCO
+                    48083-001,A1 Business Park DDP, Silicon Oasis, Dubai, UAE
+                </p>
+                <p><img src="/images/america.jpg" height="20px" alt="">
+                    Rospand Global Techno Services LLC.
+                    8 The Green Suit A, Dover,
+                    Delaware 19901, USA.
+                </p>
+
+            </address>
+        </div>
+
+        <div class="footer__nav">
+            <div class="nav__item">
+                <h2 class="nav__title">Our Services</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Import Export</a>
+                    </li>
+                    <li>
+                        <a href="#">IT Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Agro Products</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Fashion</a>
+                    </li>
+                    <li>
+                        <a href="#">Merchan trading</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Web Development</a>
+                    </li>
+
+                    <li>
+                        <a href="#">App Development</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Cloud Solutions</a>
+                    </li>
+
+                    <li>
+                        <a href="#">SEO</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sales & Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#">BPO Services</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="legal">
+            <p>&copy; 2024 Rospand Global Techno Services Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
