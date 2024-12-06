@@ -30,10 +30,15 @@
         .footer {
             display: flex;
             flex-flow: row wrap;
-            padding: 30px 30px 20px 30px;
+            padding: 20px 35px 5px 35px;
             color: #dbd8d8;
             background-color: #101e25;
             border-top: 1px solid #141313;
+        }
+        .footertopdiv{
+            width: 100%;
+            height: 40px;
+            background-color: #102935;
         }
 
         .footer>* {
@@ -42,7 +47,6 @@
 
         .footer__addr {
             margin-right: 1.25em;
-            margin-bottom: 2em;
             display: flex;
             flex-direction: column;
             /* Added to align items vertically */
@@ -57,7 +61,7 @@
         }
 
         .footer__addr h2 {
-            margin-top:5px;
+            margin-top: 5px;
             font-size: 15px;
             font-weight: 400;
         }
@@ -68,9 +72,34 @@
         }
 
         .footer address {
-            font-style: normal;
-            color: #999;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            /* Increased spacing for clear separation */
         }
+
+        .footer address div {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .footer address img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .footer address p {
+            margin: 0;
+            line-height: 1.6;
+            color: #999;
+            font-family: inherit;
+            font-size: 12px;
+            text-align: left;
+        }
+
+
 
         .footer__btn {
             display: flex;
@@ -106,8 +135,14 @@
         }
 
         .footer__nav>* {
-            flex: 1 50%;
-            margin-right: 1.25em;
+            flex: 1 1 200px;
+            /* Allows flexible growth with a minimum width of 200px */
+            text-align: start;
+            /* Center-align the content for consistency */
+        }
+
+        .technology {
+            margin-left: 90px;
         }
 
         .nav__ul a {
@@ -115,8 +150,7 @@
         }
 
         .nav__ul--extra {
-            column-count: 2;
-            column-gap: 1.25em;
+            column-count: 1;
         }
 
         .legal {
@@ -188,29 +222,45 @@
 </head>
 
 <body>
+    <div class="footertopdiv"></div>
     <footer class="footer">
+        
         <div class="footer__addr">
             <h1 class="footer__logo">Rospand Global Techno Services Pvt Ltd</h1>
 
             <h2>Offices</h2>
 
             <address>
-                <p><img src="/images/india.jpg" height="20px" alt="">
-                    Rospand Globl Techno Services Pvt Ltd
-                    106 Suphalam Building Opposite ICAD Institute, Byramji Town, Nagpur.440013
-                </p>
-                <p><img src="/images/dubai.jpg" height="20px" alt="">
-                    Rospand Globl Techno Services FZCO
-                    48083-001,A1 Business Park DDP, Silicon Oasis, Dubai, UAE
-                </p>
-                <p><img src="/images/america.jpg" height="20px" alt="">
-                    Rospand Global Techno Services LLC.
-                    8 The Green Suit A, Dover,
-                    Delaware 19901, USA.
-                </p>
-
+                <div>
+                    <img src="/images/india.jpg" height="30px" alt="India Flag">
+                    <p>
+                        <strong>India:</strong><br>
+                        Rospand Global Techno Services Pvt Ltd<br>
+                        106 Suphalam Building, Opposite ICAD Institute,<br>
+                        Byramji Town, Nagpur. 440013
+                    </p>
+                </div>
+                <div>
+                    <img src="/images/dubai.jpg" height="30px" alt="UAE Flag">
+                    <p>
+                        <strong>UAE:</strong><br>
+                        Rospand Global Techno Services FZCO<br>
+                        48083-001, A1 Business Park DDP,<br>
+                        Silicon Oasis, Dubai, UAE
+                    </p>
+                </div>
+                <div>
+                    <img src="/images/america.jpg" height="30px" alt="USA Flag">
+                    <p>
+                        <strong>USA:</strong><br>
+                        Rospand Global Techno Services LLC<br>
+                        8 The Green Suite A,<br>
+                        Dover, Delaware 19901, USA
+                    </p>
+                </div>
             </address>
         </div>
+
 
         <div class="footer__nav">
             <div class="nav__item">
@@ -232,12 +282,12 @@
                         <a href="#">Fashion</a>
                     </li>
                     <li>
-                        <a href="#">Merchan trading</a>
+                        <a href="#">Merchan Trading</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="nav__item nav__item--extra">
+            <div class="nav__item nav__item--extra technology">
                 <h2 class="nav__title">Technology</h2>
 
                 <ul class="nav__ul nav__ul--extra">
@@ -254,7 +304,7 @@
                     </li>
 
                     <li>
-                        <a href="#">SEO</a>
+                        <a href="#">Search Engine Optimization</a>
                     </li>
 
                     <li>
@@ -264,6 +314,37 @@
                     <li>
                         <a href="#">BPO Services</a>
                     </li>
+                </ul>
+            </div>
+
+            <div class="nav__item nav__item--extra">
+                <h2 class="nav__title">Products We Import / Export</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Spices & Grains</a>
+                    </li>
+
+                    <li>
+                        <a href="#">disposable Items</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Paper plates</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Mens Fashion Item</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Womens Fashion Item</a>
+                    </li>
+
+                    <li>
+                        <a href="#">disposable Items</a>
+                    </li>
+
                 </ul>
             </div>
 
